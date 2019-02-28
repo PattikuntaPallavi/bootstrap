@@ -1,0 +1,77 @@
+$(document).ready(()=>{
+    $('#save-register').click((e)=>{
+    var name=$('#name').val();
+var Dob=$('#dob').val();
+var DL=$('#dl').val();
+var email=$('#email').val();
+var number=$('#number').val();
+var password=$('#password').val();
+localStorage.setItem('name',name);
+localStorage.setItem('email',email);
+localStorage.setItem('number',number);
+localStorage.setItem('DOB',Dob);
+localStorage.setItem('driving',DL);
+const data =[
+    {
+        id: 1,
+        name: localStorage.getItem('name'),
+        DOB: localStorage.getItem('DOB'),
+        DL: localStorage.getItem('driving')
+    },
+    {
+        id: 2,
+        name: localStorage.getItem('name'),
+        DOB: localStorage.getItem('DOB'),
+        DL: localStorage.getItem('driving')
+    },
+    {
+        id: 3,
+        name: localStorage.getItem('name'),
+        DOB: localStorage.getItem('DOB'),
+        DL: localStorage.getItem('driving')
+    }
+    
+]
+localStorage.setItem('data',JSON.stringify(data));
+
+
+data.forEach((data)=>{
+    var myCol = $('<div class="col-sm-3 col-md-3 pb-2"></div>');
+    //var rows='';
+   var rows=$(`<div class="container">
+    
+            
+                    
+            
+    <div class="card " style='width:50em'>
+            
+      <div class="card-header" style="text-align:right">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popMessage">+</button>
+    <span class="pull-right clickable close-icon" data-effect="fadeOut"><i class="fa fa-times"></i></span>
+    </div>
+      <div class="card-body" ><div class="row">
+          <div class="col-md-5">
+            
+            <img alt="Card image cap" class="card-img-top img-fluid" src="Koala.jpg"  /></div>
+          <p  class="card-text">
+          username:${data.name}
+          DOB:${data.DOB}
+          license:${data.DL}
+          </p>
+      </div>
+    </div>
+      <div class="card-footer" style="text-align:right"><i>Author: Taylor Gordon</i></div>
+    </div>
+  </div>`);
+  $('#content').html(rows);
+  rows.append(myCol);
+        myCol.appendTo('#content');
+  
+
+});
+
+
+  
+
+});
+});

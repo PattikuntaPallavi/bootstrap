@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+       <title>
+            Hello | Boostrap
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class='page-header'>
+            <h2 align='center'>
+                REGISTRATION 
+            </h2>
+        </div>
+        <div class='container'>
+    
+            
+            <fieldset>
+            <form class='col-lg-5 offset-lg-4'> 
+                    <div class='cols-md-3'>
+                <div class='form-group'>
+                    <lable for='name'> Name</lable>
+                    <input type="text" class='form-control' id='name' name='name'/>
+                    <lable for='email'>Email</lable>
+                    <input type="email" class='form-control' id='email' name='email'/>
+                    <lable for='password'>Password</lable>
+                    <input type="password" class='form-control' id='password' name='password'/>
+                    <lable for='phoneno'>Phone No</lable>
+                    <input type="text" class='form-control' id='phone' name='phoneno'/><br>
+                    
+                   <input type="radio" name='gender'/>Male
+                    <input type="radio" name='gender'/>Female<br>
+                    <lable for='city'>City</lable>
+                    <select id='city'>
+                        <option>Bangalore</option>
+                        <option>Hyderabad</option>
+                        <option>Chennai</option>
+                    </select>
+                    <br>
+                    <lable for='address'>Address</lable>
+                    <textarea rows='2' cols='15' id='address' class='form-control'></textarea><br>
+                    <lable for='intrest'>Intrests</lable>
+                   <input type="checkbox"  name='intrests'id='Reading' />Reading
+                   <input type="checkbox" name='intrests' id='Playing' />Playing
+                   <br>
+                   <br>
+                   <input type="submit" class='btn btn-primary offset-sm-4' value='Save'/>
+                </div> 
+                </div>
+            </form>
+            </fieldset>
+        
+        </div>
+    </body>
+</html>
+<style>
+.form-group{
+    border:2px solid;
+    margin:7 2 2 7Spx;
+    padding:10%;
+    background-color:#009999;
+    
+}
+input{
+    background-color: grey;
+}
+
+</style>
